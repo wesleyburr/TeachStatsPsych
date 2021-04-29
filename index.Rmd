@@ -14,7 +14,7 @@ output:
       in_header: header.html
     countIncrementalSlides: false
     css: example.css
-
+    transition: fade
 ---
 
 # Background: Reproducibility
@@ -243,18 +243,42 @@ class: inverse
 ## What Not to Do
 
 * teach Excel
+    - Excel is **not** a tool for science. Period.
 * teach any menu-driven system (e.g., SPSS, Stata)
+    - while powerful, not reproducible - teaches bad habits!
 * use only examples that are small enough to type out manually
-* use clean data (next slide)
+    - misleading, hides where the work may be
+* use (fully) clean data (next slides)
+    - misleading, hides the nitty gritty
 * hide the mess from students!
 
 ---
 
-class: inverse
+background-image: url("figure/tidydata_3.jpg")
+background-position: center
+background-size: contain
 
-## Clean, Tidy, Tame and Wild Data
+## Tame and Wild Data
 
-background-image: url("images/cool.png")
+---
+
+background-image: url("figure/tidydata_1.jpg")
+background-position: center
+background-size: contain
+
+## Tidy Data
+
+
+---
+
+background-image: url("figure/tidydata_2.jpg")
+background-position: center
+background-size: contain
+
+## Tidy Data
+
+<div class="footer">
+Artwork by @allison_horst</div>
 
 ---
 
@@ -262,21 +286,21 @@ class: inverse
 
 # R Markdown
 
+
+
 ---
 
 class: inverse
 
-## Testing
+## References
 
-
-
----
-
-## An Example of One Sample
-
-<center>
-<img src="./figure/magneto1.png" style="width:900px;"/>
-</center>
+[Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum/)<br/>
+Goodman, Fanelli, Ioannidis [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12#ref-4)<br/>
+[Special Issue on Reproducible Research)[https://ieeexplore.ieee.org/document/4720217)<br/>
+Dr. Allison Horst, [Illustrations](https://github.com/allisonhorst/stats-illustrations)<br/>
+Dr. Albert Kim, [Tame Data](https://rpubs.com/rudeboybert/fivethirtyeight_tamedata)<br/>
+[Data Carpentry](https://datacarpentry.org/)
+[Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum/)
 
 ---
 
