@@ -1,5 +1,5 @@
 ---
-title: "Teaching Reproducibility and Replicability in Statistics"
+title: "(Some Musings On) Teaching Reproducibility in Statistics"
 author: 'Wesley S. Burr -- <a href="http://www.trentu.ca/math/">Trent University</a> <br> <a href="http://github.com/wesleyburr"><i class="fa fa-github fa-fw"></i>&nbsp; wsburr</a><br> <a href="http://twitter.com/wsburr"> <i class="fa fa-twitter fa-fw"></i>&nbsp; @wsburr</a><br> <a href="mailto:wesleyburr@trentu.ca"><i class="fa fa-paper-plane fa-fw"></i>&nbsp; wesleyburr@trentu.ca</a><br><br/>'
 date: 2021-05-06, 15:15-16:15
 output:
@@ -34,7 +34,7 @@ class: inverse
 ## Reproducibility 
 
 In this workshop, I am specifically interested in discussing ways in which to encourage
-students to develop strong reproducible research **methods**, particularly with 
+students to develop skills and habits for strong reproducible research **methods**, particularly with 
 respect to their data gathering, manipulation, and analysis.
 
 <br/>
@@ -48,7 +48,7 @@ class: inverse
 ## Reproducible Research Methods
 
 First published work I am aware of that discusses the specific framework I am
-thinking of here (computational reproducibility) is 1990-92, J. Claerbout 
+thinking of (computational reproducibility) is 1990-92, J. Claerbout 
 at Stanford:
 
 <br/>
@@ -97,7 +97,7 @@ To make any research project computationally reproducible
     - labelled
     - documented
 * all operations should be automated as much as practicable, avoiding manual intervention 
-* workflow designed as a sequence of steps (scripts!), combined so intermediate outputs from one step directly feed in as inputs to the next
+* workflow designed as a sequence of steps (**scripts!**), combined so intermediate outputs from one step directly feed in as inputs to the next
 * version control should be used
 
 ---
@@ -293,6 +293,8 @@ class: inverse
 # Self Training
 
 ---
+
+class: inverse
 
 ## Some Good References to Get Started
 
