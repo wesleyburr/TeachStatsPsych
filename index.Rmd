@@ -290,17 +290,31 @@ class: inverse
 
 ---
 
+# Self Training
+
+---
+
+## Some Good References to Get Started
+
+Materials for a 3-hour Workshop on R Markdown: [R Markdown Training](https://hbctraining.github.io/Training-modules/Rmarkdown/) <br/>
+The Data Carpentry Initiative: [Data Carpentry](https://datacarpentry.org/) <br/>
+A Coursera Course: [Reproducible Research with R Markdown](https://www.coursera.org/learn/reproducible-research) <br/>
+The Book: [R Markdown, the Definitive Guide](https://bookdown.org/yihui/rmarkdown/) <br/>
+
+---
+
 class: inverse
 
 ## References
 
 [Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum/)<br/>
-Goodman, Fanelli, Ioannidis [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12#ref-4)<br/>
+Drs. Goodman, Fanelli, Ioannidis [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12#ref-4)<br/>
 [Special Issue on Reproducible Research)[https://ieeexplore.ieee.org/document/4720217)<br/>
 Dr. Allison Horst, [Illustrations](https://github.com/allisonhorst/stats-illustrations)<br/>
 Dr. Albert Kim, [Tame Data](https://rpubs.com/rudeboybert/fivethirtyeight_tamedata)<br/>
-[Data Carpentry](https://datacarpentry.org/)
 [Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum/)
+Dr. Mine Çetinkaya-Rundel, [Teaching R, 5 Principles](https://mine-cetinkaya-rundel.github.io/2021-teach-r-five-principles-liverpool/)
+[Anything Dr. Mine Çetinkaya-Rundel Creates](https://github.com/mine-cetinkaya-rundel)
 
 ---
 
