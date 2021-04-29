@@ -14,9 +14,10 @@ output:
       in_header: header.html
     countIncrementalSlides: false
     css: example.css
+
 ---
 
-class: inverse
+# Background: Reproducibility
 
 ```{r include=FALSE}
 library(ggplot2)
@@ -25,6 +26,10 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=10.5, fig.height=4
   comment=NA, rows.print=16)
 theme_set(theme_gray(base_size = 24))
 ```
+
+---
+
+class: inverse
 
 ## Reproducibility 
 
@@ -42,8 +47,9 @@ class: inverse
 
 ## Reproducible Research Methods
 
-First published work I could find that referenced the specific framework I am
-thinking of here (computational reproducibility) is 1992:
+First published work I am aware of that discusses the specific framework I am
+thinking of here (computational reproducibility) is 1990-92, J. Claerbout 
+at Stanford:
 
 <br/>
 
@@ -101,6 +107,26 @@ class: inverse
 ## Workflow Includes
 
 * data acquisition
+
+---
+
+class: inverse
+
+## Workflow Includes
+
+* data acquisition
+* data processing
+    - entry
+    - manipulation
+    - filtering
+
+---
+
+class: inverse
+
+## Workflow Includes
+
+* data acquisition
 * data processing
     - entry
     - manipulation
@@ -109,8 +135,139 @@ class: inverse
     - computation of statistics
     - figures
     - model-fitting (including interim steps!) - avoid The Garden of Forking Paths!
-    - linear flow, resist urge to modify earlier steps (PHARKing)
-* actually software engineering!
+    - linear flow, resist urge to modify earlier steps (HARKing)
+
+---
+
+class: inverse
+
+## Reproducible Science Curriculum
+
+https://github.com/Reproducible-Science-Curriculum/
+
+<br/>
+* (Good) There is a folder for the raw data, which do not get altered, or intermixed with data that is the result of manual or programmatic manipulation, i.e., derived data is kept separate from raw data, and raw data are not duplicated.
+* (Good) Code is kept separate from data.
+
+---
+
+class: inverse
+
+## Reproducible Science Curriculum
+
+* (Better) Manuscript production output is kept separate from everything else.
+* (Good) There is a scratch directory for experimentation. Everything in the scratch directory can be deleted at any time without negative impact.
+* (Better) There should be a README in every directory, describing the purpose of the directory and its contents.
+
+---
+
+class: inverse
+
+## Reproducible Science Curriculum
+
+* (Best) There is a top-level Makefile or Rmarkdown file that documents the computational study in executable form. Those files may call out to other Makefile's or .Rmd files in subdirectories.
+* (Best) There is a formal metadata descriptor at the root of the package that describes all the important input and output data files.
+* (Meta) The template structure should have no special software or skill prerequisites to install. Specifically, deploying the template structure should not require installing git, or using the command line.
+
+---
+
+class: inverse
+
+## Researcher Point of View
+
+I strongly endorse **Data Carpentry**, workshops teaching scientists
+basic skills in this sort of thinking.
+
+<br/>
+Even if you don't do this for your research, if you expect to teach it properly,
+you have to know how to do it! 
+
+<br/>
+*Physician, heal thyself*
+
+<br/>
+https://datacarpentry.org/
+---
+
+class: inverse
+
+## Tips for Getting Started in Small Ways
+
+* force yourself to organize your course materials in a coherent manner
+* use Git to store your course materials (make them available freely!)
+* create your slides in R Markdown or an equivalent
+* integrate software into lectures and the classroom, not only labs and workshops
+* always be learning!
+
+---
+
+class: inverse
+
+## Inspiration
+
+File organization and naming
+are powerful weapons against chaos.
+- Jenny Bryan
+
+---
+
+class: inverse
+
+## Inspiration
+
+Your closest collaborator is you six months ago,
+but you don’t reply to emails.
+- Mark Holder
+
+
+---
+
+class: inverse
+
+## Basic Principles
+
+Basic principles
+
+Step 1: slow down and document.<br/>
+Step 2: have sympathy for your future self.<br/>
+Step 3: have a system.<br/>
+
+---
+
+# Translating All of This to Teaching
+
+---
+
+class: inverse
+
+## What Not to Do
+
+* teach Excel
+* teach any menu-driven system (e.g., SPSS, Stata)
+* use only examples that are small enough to type out manually
+* use clean data (next slide)
+* hide the mess from students!
+
+---
+
+class: inverse
+
+## Clean, Tidy, Tame and Wild Data
+
+background-image: url("images/cool.png")
+
+---
+
+class: inverse
+
+# R Markdown
+
+---
+
+class: inverse
+
+## Testing
+
 
 
 ---

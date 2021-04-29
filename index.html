@@ -19,9 +19,13 @@ class: center, middle, inverse, title-slide
 ---
 
 
+# Background: Reproducibility
+
+
+
+---
+
 class: inverse
-
-
 
 ## Reproducibility 
 
@@ -39,8 +43,9 @@ class: inverse
 
 ## Reproducible Research Methods
 
-First published work I could find that referenced the specific framework I am
-thinking of here (computational reproducibility) is 1992:
+First published work I am aware of that discusses the specific framework I am
+thinking of here (computational reproducibility) is 1990-92, J. Claerbout 
+at Stanford:
 
 &lt;br/&gt;
 
@@ -98,6 +103,26 @@ class: inverse
 ## Workflow Includes
 
 * data acquisition
+
+---
+
+class: inverse
+
+## Workflow Includes
+
+* data acquisition
+* data processing
+    - entry
+    - manipulation
+    - filtering
+
+---
+
+class: inverse
+
+## Workflow Includes
+
+* data acquisition
 * data processing
     - entry
     - manipulation
@@ -106,8 +131,119 @@ class: inverse
     - computation of statistics
     - figures
     - model-fitting (including interim steps!) - avoid The Garden of Forking Paths!
-    - linear flow, resist urge to modify earlier steps (PHARKing)
-* actually software engineering!
+    - linear flow, resist urge to modify earlier steps (HARKing)
+
+---
+
+class: inverse
+
+## Reproducible Science Curriculum
+
+https://github.com/Reproducible-Science-Curriculum/
+
+&lt;br/&gt;
+* (Good) There is a folder for the raw data, which do not get altered, or intermixed with data that is the result of manual or programmatic manipulation, i.e., derived data is kept separate from raw data, and raw data are not duplicated.
+* (Good) Code is kept separate from data.
+
+---
+
+class: inverse
+
+## Reproducible Science Curriculum
+
+* (Better) Manuscript production output is kept separate from everything else.
+* (Good) There is a scratch directory for experimentation. Everything in the scratch directory can be deleted at any time without negative impact.
+* (Better) There should be a README in every directory, describing the purpose of the directory and its contents.
+
+---
+
+class: inverse
+
+## Reproducible Science Curriculum
+
+* (Best) There is a top-level Makefile or Rmarkdown file that documents the computational study in executable form. Those files may call out to other Makefile's or .Rmd files in subdirectories.
+* (Best) There is a formal metadata descriptor at the root of the package that describes all the important input and output data files.
+* (Meta) The template structure should have no special software or skill prerequisites to install. Specifically, deploying the template structure should not require installing git, or using the command line.
+
+---
+
+class: inverse
+
+## Researcher Point of View
+
+I strongly endorse **Data Carpentry**, workshops teaching scientists
+basic skills in this sort of thinking.
+
+&lt;br/&gt;
+Even if you don't do this for your research, if you expect to teach it properly,
+you have to know how to do it! 
+
+&lt;br/&gt;
+*Physician, heal thyself*
+
+&lt;br/&gt;
+https://datacarpentry.org/
+---
+
+class: inverse
+
+## Tips for Getting Started in Small Ways
+
+* force yourself to organize your course materials in a coherent manner
+* use Git to store your course materials (make them available freely!)
+* create your slides in R Markdown or an equivalent
+* integrate software into lectures and the classroom, not only labs and workshops
+* always be learning!
+
+---
+
+class: inverse
+
+## Inspiration
+
+File organization and naming
+are powerful weapons against chaos.
+- Jenny Bryan
+
+---
+
+class: inverse
+
+## Inspiration
+
+Your closest collaborator is you six months ago,
+but you don’t reply to emails.
+- Mark Holder
+
+
+---
+
+class: inverse
+
+## Basic Principles
+
+Basic principles
+
+Step 1: slow down and document.
+Step 2: have sympathy for your future self.
+Step 3: have a system.
+
+---
+
+# Translating All of This to Teaching
+
+---
+
+class: inverse
+
+# R Markdown
+
+---
+
+class: inverse
+
+## Testing
+
 
 
 ---
@@ -117,208 +253,6 @@ class: inverse
 &lt;center&gt;
 &lt;img src="./figure/magneto1.png" style="width:900px;"/&gt;
 &lt;/center&gt;
-
----
-
-class: inverse
-
-## Project Progression and Contributors
-
-* Dr. Aaron Springford, David Riegert: original proof of concept code, designed normalization algorithm
-* (unnamed) summer students at Queen's: manual work of scanning the 35mm microfilm records
-* Mark Weygang (MSc AMOD, Trent): extended algorithm, digitized 1/2 the corpus
-* Ben Ott (summer research, Trent): refined codebase, finished extension of algorithm, designed Shiny front-end
-
----
-
-
-## What Does a Magnetic Field Observation Look Like?
-
-&lt;center&gt;
-&lt;img src="./figure/magneto2.png" style="width:1200px;"/&gt;
-&lt;/center&gt;
-
----
-
-class: inverse
-
-## How Did We Do This?
-
-* start by flipping the colours and de-compressing the image
-    - since the data was observed via an optical lens, there's an Airy disc-like scattering effect
-    - use a Gaussian filter model for the scattering, inverse function
-    - normalize the data range in the image to prevent oversaturation
-
----
-
-class: inverse
-
-## How Did We Do This?
-
-* unsupervised learning (initially developed by Mark Weygang)
-    - scan the image for a "top line"
-    - scan the image for a "bottom line"
-    - attempt to insert a line between the two signals
-    - use a dynamic step scan, point-to-point, to try to trace out the signals, one at a time
-    - attempt to determine start and end
-* produces the red fit lines of the next image
-
----
-
-class: inverse
-
-## Unsupervised Fitting
-
-
-&lt;center&gt;
-&lt;img src="./figure/magneto3.png" style="width:1500px;"/&gt; 
-&lt;br /&gt;
-&lt;img src="./figure/magneto4.png" style="width:250px;"/&gt; 
-&lt;img src="./figure/magneto5.png" style="width:250px;"/&gt; 
-&lt;/center&gt;
-
----
-
-class: inverse
-
-## Issues
-
-* not all images are so nicely behaved
-    - lines can cross, or jump off page
-    - detecting the start and end is tricky
-    - no way of knowing if the unsupervised fit is "correct"
-* there's a lot of images ...
-    - if something breaks, how do we know what it was?
-    - code quality ...
-    
----
-
-class: inverse
-
-## Supervised Learning
-
-* follow up with a human eyeball (Mark I)
-* are the fits accurate through the center?
-* are the fits starting at the correct column / pixel?
-* are the fits ending at the correct column / pixel?
-* do any of the traces intersect / cross? does the algorithm track this?
-
----
-
-class: inverse
-
-## Some Examples (1)
-
-&lt;center&gt;
-&lt;img src="./figure/issue1.png" style="width:1500px;"/&gt; 
-&lt;/center&gt;
-
-Ben Ott developed a better envelope algorithm in summer 2020 (green lines),
-which helps understand intersections and flag them. It also prevents a lot
-of the "wandering" that previously happened.
-
----
-
-class: inverse
-
-## Some Examples (2)
-
-&lt;center&gt;
-&lt;img src="./figure/issue2.png" style="width:1500px;"/&gt; 
-&lt;/center&gt;
-
-Example of the center line unsupervised fit, using the envelopes as
-guides.
-
----
-
-class: inverse
-
-## Some Examples (3)
-
-&lt;center&gt;
-&lt;img src="./figure/issue3.png" style="width:1500px;"/&gt; 
-&lt;/center&gt;
-
-Example of an issue where the envelope fit and therefore the trace
-are both pulled up suddenly by the detection of text as signal.
-(Each image has handwriting on it to note things like date, time,
-special events, etc.).
-
----
-
-class: inverse
-
-## Some Notes
-
-* this doesn't seem, on the surface, like that big of a problem
-* turns out, it's actually really tricky (to the point that Oxford astrophysicists just threw up their hands and gave up, re: the Greenwich versions of the same sort of data)
-* supervised can only take you so far ... at some point, you need a human in the loop
-
----
-
-class: inverse
-
-## Shiny
-
-* built on top of R, using a reactive interface using JavaScript
-* easy development of dynamically interactive web applets, running R on the back-end
-* naturally suited to a project that already has been built to run on R
-
----
-
-class: inverse
-
-## Quick Demo
-
-* [Link to Demo](http://shiny.wesleyburr.com/magneto/)
-
-* can manually intervene for any of the following:
-    - top trace envelopes (top/bottom)
-    - second trace envelopes (top/bottom)
-    - note that there actually 3 traces
-    - start and end of any traces
-    - upper and lower data range clips 
-
-Intervening like this is good enough to fix 95% of the remaining issues.
-The rest will require manual intervention all the way along, as they are things like 3 interlaced traces, with a poorly developed image, and text written overtop. A general-purpose algorithm can't handle that.
-
----
-
-class: inverse
-
-## Left To Do
-
-* a thesis (MSc or part of a PhD) in the statistical detection of timing ticks, and errors in the time steps of a time series
-* aggregating and time-stamping all of the observations obtained via the digitization
-* interpolating missing or damaged areas / regions / times
-* determining vertical scale factors
-
----
-
-class: inverse
-
-## Why Care?
-
-* this is a really cool data set!
-* very, very old - data back to the 1840s!
-* magnetic fields are known to be tightly coupled with sunspots, and solar activity: this gives us a proxy for climate change data!
-* calibration of other retrospective data sets for climate and space, e.g., tree rings, sunspots, solar F10.7 activity
-* the challenge is also pretty cool ...
-
-
----
-
-class: inverse
-
-## Closing Remarks
-
-* always interested in having people contribute to this, although currently there's no funding from NRCan
-* several MSc theses left in some of the tricky bits putting it all together
-* probably another MSc in the pure analysis of the resulting corpus of data
-* could definitely be small aspects suitable for 4800H if you're interested ...
-* stats is pretty broad!
-
 
 ---
 
@@ -332,7 +266,7 @@ class: inverse, middle
 
 - Contact me: [Email](mailto:wesleyburr@trentu.ca) or [Twitter](https://twitter.com/wsburr)
 - Slides created via the R package [xaringan](https://github.com/yihui/xaringan) by Yihui Xie
-- Slides available at [GitHub](https://wesleyburr.github.io/TrentSeminar2021/#1)
+- Slides available at [GitHub](https://wesleyburr.github.io/TeachingStatsPsych/#1)
 &lt;br/&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
