@@ -36,7 +36,7 @@ a, a > code {
 .inverse {
   background-color: #272822;
   color: white;
-  text-shadow: 0 0 20px #333;
+  text-shadow: 0 0 1px #333;
 }
 .inverse h1, .inverse h2, .inverse h3 {
   color: #f3f3f3;
@@ -146,7 +146,7 @@ tr:hover {background-color: skyblue}
 ul{
     font-family: 'Yanone Kaffeesatz';
     font-weight: normal;
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0px 0px 0px 60px;
@@ -155,7 +155,7 @@ ul{
 ol{
     font-family: 'Yanone Kaffeesatz';
     font-weight: normal;
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0px 0px 0px 60px;

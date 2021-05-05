@@ -3,17 +3,17 @@
   <head>
     <title>(Some Musings On) Teaching Reproducibility in Statistics</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Wesley S. Burr – Trent University     wsburr     @wsburr    wesleyburr@trentu.ca  " />
+    <meta name="author" content="Wesley S. Burr - Trent University" />
     <script src="libs/header-attrs-2.7/header-attrs.js"></script>
     <script src="https://use.fontawesome.com/5235085b15.js"></script>
-    <link rel="stylesheet" href="example.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
 # (Some Musings On) Teaching Reproducibility in Statistics
-### Wesley S. Burr – <a href="http://www.trentu.ca/math/">Trent University</a> <br> <a href="http://github.com/wesleyburr"><i class="fa fa-github fa-fw"></i>  wsburr</a><br> <a href="http://twitter.com/wsburr"> <i class="fa fa-twitter fa-fw"></i>  <span class="citation">@wsburr</span></a><br> <a href="mailto:wesleyburr@trentu.ca"><i class="fa fa-paper-plane fa-fw"></i>  wesleyburr@trentu.ca</a><br><br/>
+### Wesley S. Burr - Trent University
 ### 2021-05-06, 15:15-16:15
 
 ---
@@ -23,14 +23,15 @@ class: center, middle, inverse, title-slide
 
 
 
+
 ---
 
 class: inverse
 
 ## Reproducibility 
 
-In this workshop, I am specifically interested in discussing ways in which to encourage
-students to develop skills and habits for strong reproducible research **methods**, particularly with 
+In this talk, I am specifically interested in discussing ways in which to encourage
+students to develop skills and habits for strong reproducible research *methods*, particularly with 
 respect to their data gathering, manipulation, and analysis.
 
 &lt;br/&gt;
@@ -49,7 +50,7 @@ at Stanford:
 
 &lt;br/&gt;
 
-J. Claerbout, M. Karrenbach, **Electronic documents give reproducible research a new meaning**, in Proceedings of the 62nd Annual International Meeting of the Society of Exploration Geophysics, New Orleans, USA, 25 to 29 October 1992.
+J. Claerbout, M. Karrenbach, *Electronic documents give reproducible research a new meaning*, in Proceedings of the 62nd Annual International Meeting of the Society of Exploration Geophysics, New Orleans, USA, 25 to 29 October 1992.
 
 ---
 
@@ -60,16 +61,22 @@ class: inverse
 Some quotes:
 
 &lt;br/&gt;
-* *a revolution in education and technology transfer follows from the marriage of word processing and software command scripts*
-* *researchers ... can reproduce their own research results a year or more later by "pressing a single button"*
-* *Our basic goal is reproducible research. The electronic document is our means to this end*
+- a revolution in education and technology transfer follows from the marriage of word processing and software command scripts
+
+--
+
+- researchers ... can reproduce their own research results a year or more later by "pressing a single button"
+
+--
+
+- Our basic goal is reproducible research. The electronic document is our means to this end
 
 &lt;br/&gt;
 https://doi.org/10.1190/1.1822162
 
 ---
 
-class: inverse
+
 
 ## Definition
 
@@ -82,92 +89,51 @@ class: inverse
 
 ---
 
-class: inverse
+
 
 ## Some Necessary Components
 
 To make any research project computationally reproducible
 
-* all data and files clearly:
+- all data and files clearly:
     - separated
     - labelled
     - documented
-* all operations should be automated as much as practicable, avoiding manual intervention 
-* workflow designed as a sequence of steps (**scripts!**), combined so intermediate outputs from one step directly feed in as inputs to the next
-* version control should be used
+    
+--
+
+- all operations should be automated as much as practicable, avoiding manual intervention 
+
+--
+
+- workflow designed as a sequence of steps (**scripts!**), combined so intermediate outputs from one step directly feed in as inputs to the next
+
+--
+
+- version control should be used
 
 ---
 
-class: inverse
-
 ## Workflow Includes
 
-* data acquisition
+- data acquisition
 
----
+--
 
-class: inverse
-
-## Workflow Includes
-
-* data acquisition
-* data processing
+- data processing
     - entry
     - manipulation
     - filtering
 
----
+--
 
-class: inverse
-
-## Workflow Includes
-
-* data acquisition
-* data processing
-    - entry
-    - manipulation
-    - filtering
-* data analysis
+- data analysis
     - computation of statistics
     - figures
     - model-fitting (including interim steps!) - avoid The Garden of Forking Paths!
     - linear flow, resist urge to modify earlier steps (HARKing)
 
 ---
-
-class: inverse
-
-## Reproducible Science Curriculum
-
-https://github.com/Reproducible-Science-Curriculum/
-
-&lt;br/&gt;
-* (Good) There is a folder for the raw data, which do not get altered, or intermixed with data that is the result of manual or programmatic manipulation, i.e., derived data is kept separate from raw data, and raw data are not duplicated.
-* (Good) Code is kept separate from data.
-
----
-
-class: inverse
-
-## Reproducible Science Curriculum
-
-* (Better) Manuscript production output is kept separate from everything else.
-* (Good) There is a scratch directory for experimentation. Everything in the scratch directory can be deleted at any time without negative impact.
-* (Better) There should be a README in every directory, describing the purpose of the directory and its contents.
-
----
-
-class: inverse
-
-## Reproducible Science Curriculum
-
-* (Best) There is a top-level Makefile or Rmarkdown file that documents the computational study in executable form. Those files may call out to other Makefile's or .Rmd files in subdirectories.
-* (Best) There is a formal metadata descriptor at the root of the package that describes all the important input and output data files.
-* (Meta) The template structure should have no special software or skill prerequisites to install. Specifically, deploying the template structure should not require installing git, or using the command line.
-
----
-
-class: inverse
 
 ## Researcher Point of View
 
@@ -189,11 +155,23 @@ class: inverse
 
 ## Tips for Getting Started in Small Ways
 
-* force yourself to organize your course materials in a coherent manner
-* use Git to store your course materials (make them available freely!)
-* create your slides in R Markdown or an equivalent
-* integrate software into **lectures** and the classroom, not only labs and workshops
-* always be learning!
+- force yourself to organize your course materials in a coherent manner
+
+--
+
+- use Git to store your course materials (make them available freely!)
+
+--
+
+- create your slides in R Markdown or an equivalent
+
+--
+
+- integrate software into *lectures* and the classroom, not only labs and workshops
+
+--
+
+- always be learning!
 
 ---
 
@@ -238,14 +216,22 @@ class: inverse
 
 ## What Not to Do
 
-* use "mathiness"
-* use **lookup tables for quantiles**
-* teach Excel
-    - Excel is **not** a tool for science. Period.
-* teach any menu-driven system (e.g., SPSS, Stata)
-    - while powerful, not reproducible - teaches bad habits!
-    - if using these, force scripting
+- use "mathiness"
 
+--
+
+- use *lookup tables* for quantiles
+
+--
+
+- teach Excel
+    - Excel is *not* a tool for science. Period.
+
+--
+
+- teach the menu-driven system (e.g., SPSS, Stata *menus*)
+    - while powerful, not reproducible - teaches bad habits!
+    - if using these platforms, force scripting
 
 ---
 
@@ -253,11 +239,20 @@ class: inverse
 
 ## What Not to Do
 
-* use bad (horribly out of date) code or examples
+- use bad (horribly out of date) code or examples
+
+--
+
     - the world of data analysis and scientific data management is changing rapidly
     - anything more than 5 years old is out of date
     - students can tell
-* use only examples that are small enough to type out manually
+
+--
+
+- use only examples that are small enough to type out manually
+
+--
+
     - misleading, hides where the work may be
     - get bigger data sets in: with File Input/Output, it's just as easy to do
     
@@ -267,7 +262,10 @@ class: inverse
 
 ## What Not to Do
 
-* use (fully) clean data (next slides)
+- use (fully) clean data (next slides)
+
+--
+
     - misleading, hides the nitty gritty
     - include some outliers, include some syntax errors
     - force students to confront the reality
@@ -286,15 +284,13 @@ background-image: url("figure/tidydata_2.jpg")
 background-position: center
 background-size: contain
 
-## Tidy Data
+## Tidy Data (Artwork by @allison_horst)
 
-&lt;div class="footer"&gt;
-Artwork by @allison_horst&lt;/div&gt;
+
 
 ---
 
 # R Markdown
-
 
 ---
 
@@ -304,11 +300,17 @@ class: inverse
 
 When doing lab work, you:
 
-* use notebooks to
+- use notebooks to
+
+--
+
     - organize methods
     - organize and record results
     - jot down conclusions
-* convert these notebooks into Methods sections for papers
+
+--
+
+- convert these notebooks into Methods sections for papers
 
 ---
 
@@ -316,14 +318,25 @@ class: inverse
 
 ## Context and Motivation
 
-When working computationally, you **should**:
+When working computationally, you *should* do the same thing!
 
-* do the same thing!
-    - data provenance
-    - detailed log of workflow
-    - tools used at each step
-    - parameters ("researcher degrees of freedom") recorded
-    - versioning for software
+- data provenance
+
+--
+
+- detailed log of workflow
+
+--
+
+- tools used at each step
+
+--
+
+- parameters ("researcher degrees of freedom") recorded
+
+--
+
+- versioning for software
 
 ---
 
@@ -331,12 +344,20 @@ class: inverse
 
 ## What does this mean?
 
-* students need to access the majority of these components within their
+- students need to access the majority of these components within their
 first course
-* can't hide it all away and trust they'll pick it up later
-* immersion and support!
+
+--
+
+- can't hide it all away and trust they'll pick it up later
+
+--
+
+- immersion and support!
 
 &lt;br/&gt;
+
+--
 
 Traditionally (e.g., 2005-2015), if we wanted to include R in an introductory
 course, this meant dealing with the (horrible) R GUI (or something like R Commander).
@@ -344,18 +365,35 @@ Teaching students to code from the start. Jumping into the deep end with sharks.
 
 ---
 
-class: inverse
+## The Computational Notebook (with Markdown!)
+
+Now, for both R and Python, **notebooks** exist. These are computational
+representations of the traditional lab notebook, freely mixing:
+
+---
 
 ## The Computational Notebook (with Markdown!)
 
 Now, for both R and Python, **notebooks** exist. These are computational
 representations of the traditional lab notebook, freely mixing:
 
-* text
-* code (replaces math)
-* figures (replaces diagrams)
-* analysis
-* results
+- text
+
+--
+
+- code (replaces math)
+
+--
+
+- figures (replaces diagrams)
+
+--
+
+- analysis
+
+--
+
+- results
 
 Additionally, when run as a document instead of an interactive notebook,
 the framework is set up to **force** reproducibility through
@@ -369,7 +407,7 @@ background-size: contain
 
 ---
 
-class: inverse
+
 
 ## Advantages
 
@@ -382,14 +420,14 @@ m
 ```
 
 ```
-[1] 0.05948239
+[1] 0.01070908
 ```
 
 The code and results are right there!
 
 ---
 
-class: inverse
+
 
 ## Advantages
 
@@ -404,7 +442,7 @@ Figures and graphs are right there, with their code!
 
 ---
 
-class: inverse
+
 
 ## Advantages
 
@@ -425,12 +463,27 @@ class: inverse
 
 ## Advantages
 
-* forces students to think about workflow
-* integrates all decisions into one place
-* teaches coding skills by "stealth" (osmosis: template, scaffold, expose)
-* is actually how researchers work: no baby software or apps
-* infinitely extensible
-* supported by the R ecosystem and CRAN
+- forces students to think about workflow
+
+--
+
+- integrates all decisions into one place
+
+--
+
+- teaches coding skills by "stealth" (osmosis: template, scaffold, expose)
+
+--
+
+- is actually how most researchers work: no baby software or apps
+
+--
+
+- infinitely extensible
+
+--
+
+- supported by the R ecosystem and CRAN
 
 ---
 
@@ -442,10 +495,19 @@ class: inverse
 
 ## MATH 1051H and 1052H
 
-* very large introductory statistics classes for science majors
-* 650 and 450 students, respectively
-* students tend to not have calculus backgrounds
-* students **definitely** do not have computer science background
+- large introductory statistics classes for science majors
+
+--
+
+- 650 and 450 students, respectively
+
+--
+
+- students tend to not have calculus backgrounds
+
+--
+
+- students **definitely** do not have computer science background
 
 ---
 
@@ -453,15 +515,30 @@ class: inverse
 
 ## Structure
 
-* weekly workshops, with pre-written R Markdown documents, stepped through in real-time
+- weekly workshops, with pre-written R Markdown documents, stepped through in real-time
 with qualified TAs
-* challenge problems and learnR tutorials for additional learning
-* weekly WeBWorK self-graded assignments, mixing multiple choice, theory, and questions
+
+--
+
+- challenge problems and learnR tutorials for additional learning
+
+--
+
+- weekly WeBWorK self-graded assignments, mixing multiple choice, theory, and questions
 which **require** the use of R to complete
-* four assignments per term, turned in as knit R Markdown PDFs, stepping through
+
+--
+
+- four assignments per term, turned in as knit R Markdown PDFs, stepping through
 required skills (hand graded)
-* R code chunks included in lectures weekly, discussed
-* osmosis, osmosis, osmosis
+
+--
+
+- R code chunks included in lectures weekly, discussed
+
+--
+
+- osmosis, osmosis, osmosis
 
 ---
 
@@ -469,11 +546,20 @@ class: inverse
 
 ## Side Effects / Downsides
 
-* tech support in the first week of term is complete chaos (used rstudio.cloud for
+- tech support in the first week of term is complete chaos (used rstudio.cloud for
 a time: amazing product. Too expensive at the moment. Very sad)
-* learning curve in the first four weeks is steep
-* students must be supported and encouraged, and grading must be generous to start
-* absolutely need qualified, tuned-in TAs. You cannot use arbitrary graduate students
+
+--
+
+- learning curve in the first four weeks is steep
+
+--
+
+- students must be supported and encouraged, and grading must be generous to start
+
+--
+
+- absolutely need qualified, tuned-in TAs. You cannot use arbitrary graduate students
 who don't walk the walk / talk the talk (I train my own TAs from undergraduates who
 have taken the courses earlier in their degrees)
 
@@ -483,9 +569,14 @@ class: inverse
 
 ## Results
 
-* the vast majority (80%+) of students engage and learn
-* students are able (by the end of first semester) to create professional R Markdown
-knit documents, with fully worked analyses of scientific data 
+- the vast majority (80%+) of students engage and learn
+
+--
+
+- students are able (by the end of first semester) to create professional R Markdown knit documents, with fully worked analyses of scientific data 
+
+--
+
    - load data files
    - examine data for abnormalities
    - plot exploratory analyses
@@ -503,15 +594,41 @@ class: inverse
 By the end of the second semester, students can successfully complete
 the following in R, using R Markdown documents:
 
-* all of the above
-* load a variety of data set formats
-* linear and multiple linear regression
-* one and two-way additive ANOVA
-* interactions, with plots and discussion
-* post hoc testing
-* a broad spectrum of hypothesis tests
-* permutation testing
-* standard array of plotting techniques
+--
+
+- all of the above
+
+--
+
+- load a variety of data set formats
+
+--
+
+- linear and multiple linear regression
+
+--
+
+- one and two-way additive ANOVA
+
+--
+
+- interactions, with plots and discussion
+
+--
+
+- post hoc testing
+
+--
+
+- a broad spectrum of hypothesis tests
+
+--
+
+- permutation testing
+
+--
+
+- standard array of plotting techniques
 
 ---
 
@@ -519,10 +636,7 @@ background-image: url("figure/student_1.png")
 background-position: center
 background-size: contain
 
-## &amp;nbsp;
-
-&lt;div class="footer"&gt;
-Actual Student Example #1&lt;/div&gt;
+## Actual Student Example #1
 
 ---
 
@@ -530,10 +644,7 @@ background-image: url("figure/student_2.png")
 background-position: center
 background-size: contain
 
-## &amp;nbsp;
-
-&lt;div class="footer"&gt;
-Actual Student Example #2&lt;/div&gt;
+## Actual Student Example #2
 
 ---
 
@@ -541,25 +652,31 @@ background-image: url("figure/student_3.png")
 background-position: center
 background-size: contain
 
-## &amp;nbsp;
-
-&lt;div class="footer"&gt;
-Actual Student Example #3&lt;/div&gt;
+## Actual Student Example #3
 
 ---
 
-class: inverse
+
 
 ## Musings
 
-* I'm a statistician, and work with software every day of my professional life
-* However ...
+- I'm a statistician, and work with (and write) software every day of my professional life
+
+--
+
+- However ...
     - software is eating the world!
     - we **owe** it to our students to prepare them to use the actual tools of science
     - even if it's uncomfortable for us, we have to adapt and change and grow: 
     the **current** best practices will not be the same in 5, 10, 20 years
-* This approach **works** for novices!
-* It's amazing to see what they can do by the end of the year!
+
+--
+
+- This approach **works** for novices!
+
+--
+
+- It's amazing to see what they can do by the end of the year!
 
 ---
 
@@ -567,23 +684,32 @@ class: inverse
 
 ---
 
-class: inverse
+
 
 ## Encouragement
 
-* I want to encourage you all to consider trying to integrate RStudio and R Markdown
-into your courses
-* Make sure you do it in a way which is actually modern (not 10 years out of date) - students
-can tell
-* It has to be integrated and seamless - a bolt-on will never work
-* Leverage the "big data movement" to bring examples beyond the scope of the course
-into the classroom to inspire and excite the students
-* Always be learning!
+- I want to encourage you all to consider trying to integrate RStudio and R Markdown into your courses
+
+--
+
+- Make sure you do it in a way which is actually modern (not 10 years out of date) - students can tell
+
+--
+
+- It has to be integrated and seamless - a bolt-on will never work
+
+--
+
+- Leverage the "big data movement" to bring examples beyond the scope of the course into the classroom to inspire and excite the students
+
+--
+
+- Always be learning!
 
 
 ---
 
-class: inverse
+
 
 ## Some Good References to Get Started
 
@@ -594,7 +720,7 @@ The Book: [R Markdown, the Definitive Guide](https://bookdown.org/yihui/rmarkdow
 
 ---
 
-class: inverse
+
 
 ## References
 
@@ -613,7 +739,7 @@ Dr. Mine Çetinkaya-Rundel, [Teaching R, 5 Principles](https://mine-cetinkaya-ru
 ---
 
 layout: false
-class: inverse, middle
+class: middle
 
 &lt;center&gt;
 &lt;a href="http://www.trentu.ca/math/"&gt;&lt;img src="figure/trent.png" style="width: 200px;"/&gt;&lt;/a&gt; &amp;emsp;&amp;emsp;
